@@ -37,6 +37,7 @@ void deleteAtBeginning() {
 }
 
 void deleteAtEnd() {
+    if (head == NULL) printf("Linked List is empty.");
     struct node *prevNode;
     temp = head;
     while(temp->next!=NULL) {
@@ -50,6 +51,7 @@ void deleteAtEnd() {
 }
 
 void deleteAtPos() {
+    if (head == NULL) printf("Linked List is empty.");
     struct node *nextNode;
     int pos, i=1;
     temp=head;
@@ -79,6 +81,20 @@ void display() {
     printf("NULL\n");
 }
 
+void getLength() {
+    if (head == NULL) printf("Linked List is empty.\n");
+    else {
+        int count = 0;
+        temp = head;
+        while(temp!=NULL) {
+            temp=temp->next;
+            count++;
+        }
+        printf("Number of nodes in the linked list is : %d\n", count);
+    }
+
+}
+
 void main() {
     int ch, n;
     printf("Enter no. of data in Linked List : ");
@@ -87,7 +103,7 @@ void main() {
     for ( i = 0; i < n; i++) createNode();
     while (1)
     {
-        printf("1.Delete at beginning 2.Delete at end 3.Delete at position 4.Display 5.Exit\n");
+        printf("1.Delete at beginning 2.Delete at end 3.Delete at position 4.Display 5.Number of nodes 6.Exit\n");
         printf("Enter Choice : ");
         scanf("%d", &ch);
         switch (ch)
@@ -96,7 +112,8 @@ void main() {
         case 2: deleteAtEnd(); break;
         case 3: deleteAtPos(); break;
         case 4: display(); break;
-        case 5: exit(0); break;
+        case 5: getLength(); break;
+        case 6: exit(0); break;
         default: printf("Invalid Choice\n"); break;
         }
     }
