@@ -4,14 +4,14 @@ void main() {
     int *p; 
     int *s;
     int q;
-    // Here if we write p = a; this will be wrong it will only work in case of 1-D arrays here as it is a 2-D array it will will storing address of the array{1,11,13} will is wrong as p is a pointer to an integer
+    // Here if we write p = a; this will be wrong, it will only work in case of 1-D arrays .Here as it is a 2-D array it will be storing address of the array{1,11,13} which is wrong as p is a pointer to an integer
     p = &a[0][0];
     s=a[0];
     //p=a[0]; is also correct as a[0] is the array {1,11,3} and a[0] will contain the address to its first variable that is 1 but p=a[0][0] is wrong as a[0][0] = 1 will is an integer value and p can only store address of an integer variable.
     //or we can print &a as it will store the base address of the entire array
     printf("%u\n", &a); 
     printf("%p\n", p);
-    //%p for hexadecimal format and %u for integer format
+    // %p for hexadecimal format and %u for integer format
     printf("%u\n", p);
     printf("%p\n", s);
     printf("%p\n", p+3);
