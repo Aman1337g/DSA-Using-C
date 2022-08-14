@@ -65,6 +65,7 @@ void delPos() {
     else if(pos == l) delEnd();
     else {
         temp = head;
+        i = 1;
         while(i<pos) {
             temp = temp->next;
             i++;
