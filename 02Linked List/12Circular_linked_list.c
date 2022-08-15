@@ -20,7 +20,7 @@ void createCLL() {
             temp->next = newnode;
             temp = newnode;
         }
-        temp->next = head;
+        temp->next = head;  // last node will contain the address of the first node
         printf("Do you want to continue(0,1)? : ");
         scanf("%d", &choice);
     }
