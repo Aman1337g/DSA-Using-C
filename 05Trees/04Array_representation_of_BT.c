@@ -1,9 +1,9 @@
  /* Consider a binary tree
                    A
                 /     \
-               B      C
-              / \    / \
-             D   E  F   G
+               B       C
+              / \     / \
+             D   E   F   G
             / \
            H   I
 */
@@ -37,16 +37,29 @@ Case 2 - Array indexing starts from 1
 /* But if tree given as 
                    A
                 /     \
-               B      C
-              / \    / \
-             D   E  F   G
+               B       C
+              / \     / \
+             D   E   F   G
                 / \
                H   I
 
     Here array in both the cases would be same but formula will not hold
 */
 
-/* So,
+/*
    NOTE - 1. The binary tree which we are representing using array must be a complete binary tree
             - all levels are completely filled (except possibly the last level) and last level has nodes as left as possible
+
+            So, we have to make the binary tree a complete binary tree by inserting empty nodes 
+                    A 
+                /       \
+               B         C
+             /   \      / \
+            D     E    F   G
+           / \   / \
+          () () H   I
+
+          Here the formulae will hold and matrix
+          M, N = [A,B,C,D,E,F,G,_,_,H,I]   [Wastage of space in this representation] 
+
 */
