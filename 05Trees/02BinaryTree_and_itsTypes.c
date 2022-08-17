@@ -18,10 +18,14 @@
 /*
 1. Full/Proper/Strict - each node contains either 0 or 2 childrens (OR each node is having two children except leaf node)
     - no. of leaf node = no. of internal nodes + 1
+
 2. Complete Binary Tree - all levels are completely filled (except possibly the last level) and last level has nodes as left as possible
+
 3. Perfect Binary Tee - all internal nodes have 2 children and all leaves are at same level
     - it is both complete and full binary tree but not true vice-versa  
+
 4. Degenerate Binary Tee - all the internal nodes have only one child (right skewered , left skewered, or mixture of both)
+
 5. Balanced(AVL) Binary Tee
 */
 
