@@ -1,6 +1,6 @@
 // Data structure is basically a way to organize data such that we can process the data efficiently
 /*  DATA STRUCTURE
-1. Linear DS - here data is stored in a sequential mannner [Array, Linked List, Stack, Queue]
+1. Linear DS - here data is stored in a sequential manner [Array, Linked List, Stack, Queue]
 2. Non-linear DS - data is stored in multiple levels or is in form of hierarchy [Trees, Graphs]
 */
 

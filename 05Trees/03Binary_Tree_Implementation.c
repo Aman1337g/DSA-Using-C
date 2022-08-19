@@ -10,7 +10,7 @@ struct node {
     struct node *right; // for storing address of right subtree
 };
 
-struct node *create() { 
+struct node *create() {     // As create function is returning pointer (pointer to a node) we are writing struct node *
     int x;
     struct node *newnode;
     newnode = (struct node *)malloc(sizeof(struct node));
