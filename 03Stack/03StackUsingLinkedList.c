@@ -1,13 +1,10 @@
 #include<stdio.h>
 #include<stdlib.h>
-#include<conio.h>
 
-struct node
-{
+struct node {
     int data;
-    struct node *link;
+    struct node *link;    // Self-referential structure - structures pointing to the same type of structures are self-referential in nature
 };
-
 struct node *top = NULL;
 
 void push() {
@@ -24,14 +21,10 @@ void push() {
 void display() {
     struct node *temp;
     temp = top;
-    if (top == NULL)
-    {
-        printf("Stack is empty.\n");
-    }
+    if (top == NULL) printf("Stack is empty.\n");
     else {
         printf("Stack :\n");
-        while (temp!=NULL)
-        {
+        while (temp!=NULL) {
             printf("%d\n", temp->data);
             temp = temp->link;
         }
@@ -39,57 +32,33 @@ void display() {
 }
 
 void peek() {
-    if (top == 0)
-    {
-        printf("Stack is empty.\n");
-    }
-    else printf("Top element is : %d\n", top->data);
-    
+    if (top == 0) printf("Stack is empty.\n");
+    printf("Top element is : %d\n", top->data);
 }
 
 void pop() {
     struct node *temp;
     temp = top;
-    if (top == NULL)
-    {
-        printf("Underflow Condition.\n");
-    }
+    if (top == NULL) printf("Underflow Condition.\n");
     else {
         printf("Popped element is : %d\n", top->data);
         top = top->link;
         free(temp);
-    }
-    
+    }  
 }
 
 void main() {
     int ch;
-    // clrscr();
-    system("cls");
-    do
-    {
+    do {
         printf("Enter choice : 1:Push 2:Pop 3:Peek 4:Display 5:Exit\n");
         scanf("%d", &ch);
-        switch (ch)
-        {
-        case 1:
-            push();
-            break;
-        case 2: 
-            pop();
-            break;
-        case 3: 
-            peek();
-            break;
-        case 4:
-            display();
-            break;
-        case 5:
-            exit(0);
-        default:
-            printf("Invalid Choice\n");
-            break;
+        switch (ch) {
+        case 1: push(); break;
+        case 2: pop(); break;
+        case 3: peek(); break;
+        case 4: display(); break;
+        case 5: exit(0); break;
+        default: printf("Invalid Choice\n"); break;
         }
     } while (1);
-    getch();
 }
