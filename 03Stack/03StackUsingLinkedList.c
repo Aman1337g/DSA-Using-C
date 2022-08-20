@@ -14,7 +14,7 @@ void push() {
     struct node *newnode;   
     newnode = (struct node *)malloc(sizeof(struct node));
     newnode->data=x;
-    newnode->link=top;
+    newnode->link=top;  // Adding newnodes at the beginning of linked list
     top = newnode;
 }
 
