@@ -11,7 +11,7 @@
 
     6. If incoming symbol has lower precedence then the top of the stack , pop and print the top. Then test the incoming operator against the new top of the stack.
 
-    7. If incoming operator has equal precedence with the top of the stack , use assciativity scale.
+    7. If incoming operator has equal precedence with the top of the stack , use associativity scale.
 
     8. At the end of the expression , pop and print all operators of stack.  
 
