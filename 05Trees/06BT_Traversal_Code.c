@@ -6,8 +6,8 @@
                / \     \
               7   8     1
 
-   1. Preorder - 4 5 7 8 10 1   [Left Root Right]
-   2. Inorder - 7 5 8 4 10 1    [Root Left Right]
+   1. Preorder - 4 5 7 8 10 1   [Root Left Right]
+   2. Inorder - 7 5 8 4 10 1    [Left Root Right]
    3. Postorder - 7 8 5 1 10 4  [Left Right Root]
 */
 // Code -

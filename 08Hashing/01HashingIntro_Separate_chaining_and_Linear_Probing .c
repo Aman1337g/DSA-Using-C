@@ -68,7 +68,7 @@ INDEX  |    KEY
    h(k) = 2k+3 , m=10.
    Use division method(h(k(i)) = k(i)%m) and OPEN addressing(linear probing, quadratic probing, double hashing) to store these values
 
-Ans- Unless stated we use linear probing method by default to minimize collision in open addressinG
+Ans- Unless stated we use linear probing method by default to minimize collision in open addressing
   
     KEY   |      LOCATION  (u)                               |     PROBES
     3     |      (2*3+3) % m = (2*3+3) % 10 = 9              |      1
