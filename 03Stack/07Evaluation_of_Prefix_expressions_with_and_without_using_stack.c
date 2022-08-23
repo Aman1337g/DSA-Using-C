@@ -52,4 +52,7 @@
     2. If find a operand , push it into the stack.
     3. If an operator in encountered , pop out TOP and (TOP-1) operand and PUSH the result of [TOP <operator> (TOP-1)] into stack.
     4. After repeating step 3 till we scan the whole expression , top of the stack will be our final answer.
+
+    [WE CAN USE THIS APPROACH FOR CONVERSION OF POSTFIX EXPRESSION TO INFIX EXPRESSION]
+    
 */
