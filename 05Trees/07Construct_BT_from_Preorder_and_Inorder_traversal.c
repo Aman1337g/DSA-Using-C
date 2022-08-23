@@ -1,5 +1,5 @@
 /*  For Example - 
-    Pre-order :-  1, 2, 4, 8, 9, 10, 11, 5, 3, 6, 7   [Root Left Right]
+    Pre-order :-  1, 2, 4, 8, 9, 10, 11, 5, 3, 6, 7   [Root Left Right]   [Scan from L->R to find root node]
     In-order :-  8, 4, 10, 9, 11, 2, 5, 1, 6, 3, 7    [Left Root Right]
 
     -> By pre-order , root will be the first element so root = 1
