@@ -4,9 +4,9 @@
                        /|    / |
                      1/ |   /  |
                       \ |  /   |      [Pictorial  view of Graph]
-                       \| /____5
+                       \| /____5      [UNDIRECTED GRAPH]
                         4
-
+    
     Two most popular ways-
 
     1. Adjacency Matrix -> It is a matrix A[n][n] where n is no. of edges
