@@ -23,8 +23,8 @@
         - Suppose we take '0' as the root node.
         - Now , all the adjacent vertices of '0' will be traversed first. eg - adjacent to '0' here are 1 and 3.
           So, we can visit either '1' or '3' after '0'.
-        - Now , this process is repeated taking care of the adjacent and unvisited nodes. All the adjacent vertices are written
-          are inserted in the queue.
+        - Now , this process is repeated taking care of the adjacent and unvisited nodes. All the adjacent vertices are 
+          inserted in the queue.
 
         > NOTE : Finding out of ALL adjacent nodes is also called EXPLORATION of that node.
 
@@ -126,7 +126,7 @@
 
         Stack
         6.                      |       |       Now, Top-most element (6)here is popped out. Backtrack.
-                                |       |       Now, next top elment is '4'.
+                                |       |       Now, next top element is '4'.
                                 |       |       Now, check if '4' has any adjacent unvisited vertex. 4 -> 3, 2, 6 are already visited.
                                 |   2   |       So, '4' will be popped out of the stack. Backtrack to '2'.
                                 |   3   |
@@ -145,37 +145,27 @@
                                 ---------
 
         Stack
-        8.                      |       |       Now, Top-most element (6)here is popped out. Backtrack.
-                                |       |       Now, next top elment is '4'.
-                                |   5   |       Now, check if '4' has any adjacent unvisited vertex. 4 -> 3, 2, 6 are already visited.
-                                |   2   |       So, '4' will be popped out of the stack. Backtrack to '2'.
+        8.                      |       |       Now, Top-most element (5)here is popped out. Backtrack.
+                                |       |       Now, next top element is '2'.
+                                |       |       Now, check if '2' has any adjacent unvisited vertex. 2 -> 1, 5, 4, 3 are already visited.
+                                |       |       So, '2' will be popped out of the stack. Backtrack to '3'.
                                 |   3   |
                                 |   1   |       RESULT - 0, 1, 3, 2, 4, 6, 5
                                 |   0   |
                                 ---------
 
         Stack
-        9.                      |       |       Now, Top-most element (5)
-                                |       |       5 -> 1, 2 are already visited. Backtrack
-                                |   5   |       So, '5' will be popped out of the stack. Backtrack to '2'.
-                                |   2   |       RESULT - 0, 1, 3, 2, 4, 6, 5
-                                |   3   |
+        9.                      |       |       Now, Top-most element (3)
+                                |       |       3 -> 0, 1, 2, 4 are already visited. Backtrack
+                                |       |       So, '3' will be popped out of the stack. Backtrack to '1'.
+                                |       |       RESULT - 0, 1, 3, 2, 4, 6, 5
+                                |       |
                                 |   1   |
                                 |   0   |
                                 ---------
 
         Stack
-        10.                     |       |       Now, Top-most element (2). 2 -> has no adjacent unvisted vertex. Backtrack
-                                |       |       Now, next top elment is '3'.
-                                |       |       Now, check if '3' has any adjacent unvisited vertex. 3 -> 0, 1, 2, 4 are already visited.
-                                |       |       So, '3' will be popped out of the stack. Backtrack to '1'.
-                                |   3   |
-                                |   1   |       RESULT - 0, 1, 3, 2, 4, 6, 5
-                                |   0   |
-                                ---------
-
-        Stack
-        11.                     |       |       Now, Top-most element (1). 1 -> has no adjacent unvisted vertex. Backtrack
+        10.                     |       |       Now, Top-most element (1). 1 -> has no adjacent unvisted vertex. Backtrack
                                 |       |       Now, next top elment is '0'.
                                 |       |       Now, check if '0' has any adjacent unvisited vertex. 0 -> 1, 3 are already visited.
                                 |       |       So, '0' will be popped out of the stack. Backtrack to '1'.
@@ -188,7 +178,7 @@
         So , DFS traversal of the given graph
         RESULT - 0, 1, 3, 2, 4, 6, 5
 
-        - Here , also this is not the only DFS traversal of this graph, there are numerous valid DFS traversals of this graph depending on the
+        - Here also ; this is not the only DFS traversal of this graph, there are numerous valid DFS traversals of this graph depending on the
           order of insertion of adjacent node and root node selected.
 
 */
