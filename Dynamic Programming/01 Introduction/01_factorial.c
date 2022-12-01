@@ -98,4 +98,6 @@ void main()
 //     printf("Value of %d element starting from 0 1 1 2 .. %d: ", n, n);
 //     printf("%d ", fibo(n));
 //     printf("\nNo. of times fibo() function run : %d", count);
-// }
+//     
+//     return 0;
+//}
