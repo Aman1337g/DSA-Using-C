@@ -1,95 +1,108 @@
-#include<stdio.h>
-#include<stdlib.h>
+#include <stdio.h>
+#include <stdlib.h>
 
 struct node
 {
     int data;
     struct node *next;
 };
-struct node *head=NULL, *newnode, *temp;
-int pos, count=0, i=0;
+struct node *head = NULL, *newnode, *temp;
+int pos, count = 0, i = 0;
 // head=NULL;
-void createNode() {
-    newnode=(struct node *)malloc(sizeof(struct node));
-    newnode->next=NULL;
+void createNode()
+{
+    newnode = (struct node *)malloc(sizeof(struct node));
+    newnode->next = NULL;
     printf("Enter data : ");
     scanf("%d", &newnode->data);
-    if (head==NULL)
+    if (head == NULL)
     {
-        head=temp=newnode;
+        head = temp = newnode;
     }
-    else {
-        temp->next=newnode;
-        temp=newnode;
-    }
-    count++;
-}
-
-void insertAtBeginning() {
-    newnode=(struct node *)malloc(sizeof(struct node));
-    printf("Enter data : ");
-    scanf("%d", &newnode->data);
-    newnode->next=head;
-    head=newnode;
-    count++;
-}
-
-void insertAtEnd() {
-    newnode=(struct node *)malloc(sizeof(struct node));
-    printf("Enter data : ");
-    scanf("%d", &newnode->data);
-    temp=head;
-    newnode->next=NULL;
-    while (temp->next!=NULL)
+    else
     {
-        temp=temp->next;
+        temp->next = newnode;
+        temp = newnode;
     }
-    temp->next=newnode;
     count++;
 }
 
-void insertAtPosition() {
+void insertAtBeginning()
+{
+    newnode = (struct node *)malloc(sizeof(struct node));
+    printf("Enter data : ");
+    scanf("%d", &newnode->data);
+    newnode->next = head;
+    head = newnode;
+    count++;
+}
+
+void insertAtEnd()
+{
+    newnode = (struct node *)malloc(sizeof(struct node));
+    printf("Enter data : ");
+    scanf("%d", &newnode->data);
+    temp = head;
+    newnode->next = NULL;
+    while (temp->next != NULL)
+    {
+        temp = temp->next;
+    }
+    temp->next = newnode;
+    count++;
+}
+
+void insertAtPosition()
+{
     printf("Enter position : ");
     scanf("%d", &pos);
-    if (pos>count)
+    if (pos == 0)
+    {
+        insertAtBeginning();
+    }
+    else if (pos > count)
     {
         printf("Invalid Position.!!\n");
     }
-    else {
+    else
+    {
         temp = head;
-        newnode=(struct node *)malloc(sizeof(struct node));
+        i = 0;
+        newnode = (struct node *)malloc(sizeof(struct node));
         printf("Enter data : ");
         scanf("%d", &newnode->data);
-        while (i<pos)
+        while (i < pos - 1)
         {
-            temp=temp->next;
+            temp = temp->next;
             i++;
         }
-        newnode->next=temp->next; //we have to follow this sequence only as if we write temp->next=newnode the link between original nodes will break and we cannot link the newnode to next node. 
-        temp->next=newnode;
+        newnode->next = temp->next; // we have to follow this sequence only as if we write temp->next=newnode the link between original nodes will break and we cannot link the newnode to next node.
+        temp->next = newnode;
+        ++count;
     }
-    
 }
 
-void display() {
+void display()
+{
     printf("Linked List : ");
-    temp=head;
-    while (temp!=NULL)
+    temp = head;
+    while (temp != NULL)
     {
         printf("%d->", temp->data);
-        temp=temp->next;
+        temp = temp->next;
     }
     printf("NULL\n");
 }
 
-void main() {
+void main()
+{
     int ch, n;
     printf("Enter no. of data in Linked List : ");
-        scanf("%d", &n);
-        for ( i = 0; i < n; i++)
-        {
-            createNode();
-        }
+    scanf("%d", &n);
+    for (i = 0; i < n; i++)
+    {
+        createNode();
+    }
     while (1)
     {
         printf("1.Insert at beginning 2.Insert at end 3.Insert at position 4.Display 5.Exit\n");
@@ -97,12 +110,24 @@ void main() {
         scanf("%d", &ch);
         switch (ch)
         {
-        case 1: insertAtBeginning(); break;
-        case 2: insertAtEnd(); break;
-        case 3: insertAtPosition(); break;
-        case 4: display(); break;
-        case 5: exit(0); break;
-        default: printf("Invalid Choice\n"); break;
+        case 1:
+            insertAtBeginning();
+            break;
+        case 2:
+            insertAtEnd();
+            break;
+        case 3:
+            insertAtPosition();
+            break;
+        case 4:
+            display();
+            break;
+        case 5:
+            exit(0);
+            break;
+        default:
+            printf("Invalid Choice\n");
+            break;
         }
     }
 }
